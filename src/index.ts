@@ -89,13 +89,13 @@ export async function main(): Promise<void> {
         maxCodeSize: {
           type: "number",
           demandOption: false,
-          default: 64,
+          default: 64000,
           describe: "Maximum contract size (kb)",
         },
         txnSizeLimit: {
           type: "number",
           demandOption: false,
-          default: 64,
+          default: 64000,
           describe: "Maximum transaction size (kb)",
         },
         validators: {
