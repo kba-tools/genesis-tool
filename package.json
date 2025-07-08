@@ -1,13 +1,14 @@
 {
-  "name": "quorum-genesis-tool",
-  "version": "0.2.20",
-  "description": "A utility that lets developers create genesis files and node (&account) keys from ConsenSys!",
+  "name": "@kba-tools/genesis-tool",
+  "version": "1.0.0",
+  "description": "A forked repo from ConsenSys which helps to generate genesis block for Besu Network with xemptyBlockPeriod field.",
   "main": "build/index.js",
   "types": "build/typescript/index.d.ts",
-  "repository": "git@github.com:ConsenSys/quorum-genesis-tool.git",
+  "repository": "git@github.com:kba-tools/genesis-tool.git",
   "contributors": [
     "Joshua Fernandes <3722503+joshuafernandes@users.noreply.github.com>",
-    "Eric Lin <38420555+Ezzahhh@users.noreply.github.com>"
+    "Eric Lin <38420555+Ezzahhh@users.noreply.github.com>",
+    "Vishva Prasad"
   ],
   "license": "Apache-2.0",
   "keywords": [

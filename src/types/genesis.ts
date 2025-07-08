@@ -2,6 +2,7 @@ export type Algorithm = {
   blockperiodseconds?: number;
   requesttimeoutseconds?: number;
   emptyblockperiodseconds?: number;
+  xemptyblockperiodseconds?: number;
   epochlength?: number;
   epoch?: number;
   policy?: number;

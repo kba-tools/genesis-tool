@@ -1,12 +1,12 @@
 {
-  "name": "quorum-genesis-tool",
-  "version": "0.2.20",
+  "name": "@kba-tools/genesis-tool",
+  "version": "1.0.0",
   "lockfileVersion": 2,
   "requires": true,
   "packages": {
     "": {
-      "name": "quorum-genesis-tool",
-      "version": "0.2.20",
+      "name": "@kba-tools/genesis-tool",
+      "version": "1.0.0",
       "license": "Apache-2.0",
       "dependencies": {
         "argon2": "^0.40",
@@ -24,7 +24,7 @@
         "yargs": "^17.3.1"
       },
       "bin": {
-        "quorum-genesis-tool": "index.js"
+        "genesis-tool": "index.js"
       },
       "devDependencies": {
         "@types/jest": "^29.5.12",

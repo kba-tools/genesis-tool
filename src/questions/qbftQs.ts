@@ -195,13 +195,35 @@ _emptyBlockPeriodQuestion.transformerValidator = integerValidator(
   60
 );
 
+const _xemptyBlockPeriodQuestion: QuestionTree = Object.assign(
+  {},
+  commonQs.xemptyBlockPeriodQuestion
+);
+_xemptyBlockPeriodQuestion.transformerValidator = (rawInput: string, answers: Record<string, unknown>) => {
+  const normalizedInput = rawInput.trim().toLowerCase();
+  // Default is "n"
+  const isYes = normalizedInput === "y";
+  answers[_xemptyBlockPeriodQuestion.name] = isYes;
+  if (normalizedInput === "" || normalizedInput === "n") {
+    // Skip emptyBlockPeriodQuestion if "n" or default
+    return _requestTimeoutQuestion; // or whatever the next question should be
+  } else if (isYes) {
+    // Ask emptyBlockPeriodQuestion if "y"
+    return _emptyBlockPeriodQuestion;
+  } else {
+    // Invalid input, ask again
+    console.log("Please answer y or n.");
+    return _xemptyBlockPeriodQuestion;
+  }
+};
+
 const _blockPeriodQuestion: QuestionTree = Object.assign(
   {},
   commonQs.blockPeriodQuestion
 );
 _blockPeriodQuestion.transformerValidator = integerValidator(
   _blockPeriodQuestion,
-  _emptyBlockPeriodQuestion,
+  _xemptyBlockPeriodQuestion,
   5
 );
 

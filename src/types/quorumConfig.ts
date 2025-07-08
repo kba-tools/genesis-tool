@@ -5,6 +5,7 @@ export type QuorumConfig = {
   consensus: Consensus;
   chainID: number;
   emptyBlockPeriod: number;
+  xemptyBlockPeriod: boolean;
   blockperiod: number;
   requestTimeout: number;
   epochLength: number;

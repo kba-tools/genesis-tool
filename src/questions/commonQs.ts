@@ -97,7 +97,13 @@ export const requestTimeoutQuestion: QuestionTree = {
 export const emptyBlockPeriodQuestion: QuestionTree = {
   name: "emptyBlockPeriod",
   prompt:
-    "(GoQ only) Set your emptyblockperiodseconds value: (integer) Default: 60",
+    "Set your emptyblockperiodseconds value: (integer) Default: 60",
+};
+
+export const xemptyBlockPeriodQuestion: QuestionTree = {
+  name: "xemptyBlockPeriod",
+  prompt:
+    "(Besu only) Do you need xemptyBlockPeriod field in genesis block: [y/n] Default: N",
 };
 
 export const blockPeriodQuestion: QuestionTree = {

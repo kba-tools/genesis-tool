@@ -117,6 +117,9 @@ export function createBesuGenesis(
         blockperiodseconds: quorumConfig.blockperiod,
         epochlength: quorumConfig.epochLength,
         requesttimeoutseconds: quorumConfig.requestTimeout,
+        ...(quorumConfig.xemptyBlockPeriod === true && {
+          xemptyblockperiodseconds: quorumConfig.emptyBlockPeriod,
+        }),
       };
       break;
     }

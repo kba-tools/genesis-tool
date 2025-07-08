@@ -56,6 +56,12 @@ export async function main(): Promise<void> {
           describe:
             "Reduce number (seconds) of blocks produced when there are no transactions",
         },
+        xemptyBlockPeriod: {
+          type: "boolean",
+          demandOption: false,
+          default: false,
+          describe: "Include xemptyBlockPeriod field in genesis block (Besu only)",
+        },
         epochLength: {
           type: "number",
           demandOption: true,
@@ -169,6 +175,7 @@ export async function main(): Promise<void> {
       chainID: args.chainID,
       blockperiod: args.blockperiod,
       requestTimeout: args.requestTimeout,
+      xemptyBlockPeriod: args.xemptyBlockPeriod,
       emptyBlockPeriod: args.emptyBlockPeriod,
       epochLength: args.epochLength,
       difficulty: args.difficulty,
